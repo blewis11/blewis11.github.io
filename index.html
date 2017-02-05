@@ -1,0 +1,242 @@
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<script
+		  src="https://code.jquery.com/jquery-3.1.1.js"
+		  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		  crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+
+			.main-jumbo {
+				background-color: #EDEDE7;
+				height: 100%;
+			}
+
+			.title {
+				padding-top: 5%;
+				padding-bottom: 15%;
+			}
+
+			.icon-git, .icon-linkedIn, .icon-soundcloud {
+				color: #333333;
+				transition: color 0.3s;
+			}
+
+			.icon-git {
+				padding-right: 10px;
+			}
+
+			.icon-git:hover{
+				color: #251F47;
+			}
+
+			.icon-soundcloud {
+				padding-left: 10px;
+			}
+
+			.icon-soundcloud:hover{
+				color: #FA8334;
+			}
+
+			.icon-linkedIn:hover{
+				color: #4A8FE7;
+			}
+
+			.icons {
+				font-size: 35px;
+				padding-bottom: 10%;
+
+			}
+
+			.icons:hover {
+				cursor: pointer;
+			}
+
+			#myCarousel {
+				padding-bottom: 20%;
+			}
+
+			body{
+				background-color: #EDEDE7;
+			}
+
+
+			.sectionHeader:hover {
+				color: #DC784D;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			
+			#aboutMe {
+				color: #DC784D;
+			}
+
+		    #aboutText {
+				position: relative;
+				transition: display 2s;
+		    }
+
+		    #projectsText {
+		    	display: none;
+		    	transition: display 2s;
+		    }
+
+		    #contactText{
+		    	display: none;
+		    	transition: display 2s;
+		    }
+
+		    .subtitle {
+		    	color: #6b6b70;
+		    }
+
+		    .subtitle a {
+		    	color: #6b6b70;
+		    }
+
+		    .project {
+		    	padding-bottom: 100px;
+		    }
+
+		    #contents{
+		    	padding-top: 5%;
+		    	padding-bottom: 10%;
+		    }
+
+		</style>
+
+	</head>
+
+	<body>
+		<div class='container-fluid'>
+			<div class="jumbotron text-center main-jumbo">
+
+				<img class='title' alt="title" src="./files/Logo.png"/>
+
+				<div class="col-sm-12 icons">
+					<span><a href="https://github.com/blewis11" target="_blank"><i class="fa fa-github icon-git" aria-hidden="true"></a></i></span>
+					<span><a href="https://ca.linkedin.com/in/bejal-lewis" target="_blank"><i class="fa fa-linkedin icon-linkedIn" aria-hidden="true"></a></i></span>
+					<span><a href="https://soundcloud.com/bejal" target="_blank"><i class="fa fa-soundcloud icon-soundcloud" aria-hidden="true"></a></i></span>
+				</div>
+
+				<div class="row options-row">
+					<div class="col-sm-4">
+						<p class="sectionHeader" id="aboutMe">About Me</p>
+					</div>
+					<div class="col-sm-4">
+						<p class="sectionHeader" id="myProjects">My Projects</p>
+					</div>
+					<div class="col-sm-4">
+						<p class="sectionHeader" id="sayHi">Say Hi</p>
+					</div>
+				</div>
+				<hr />
+
+				<div class="row" id="contents">
+					<div class="col-sm-12" id="aboutText">
+						<p>Hey! i'm Bejal.</p>
+						<p>I'm a fourth year student at McGill University, studying computer science and biology. My main loves in life include binge-watching netflix, good tunes (check out my super awesome soundcloud link above), and coding. Although I do enjoy the life of a student, hanging out and chugging late night coffee to finish assignments, I am currently looking for full time employment. I'm up for any challenge, and am a fast self-learner. You name it, i'll learn it. Check out my <a href="./files/Resume.pdf" target="_blank">resume</a>, and more in-detail descriptions of my favourite work in the projects tab.</p>
+					</div>
+					
+
+					<div class="col-sm-12" id="projectsText">
+
+						<div class="project">
+							<h2>MAD-EZ: Semi-Automated API Documentation</h2>
+								<h4 class="subtitle">August 2016 - Present | <a href="http://www.cs.mcgill.ca/~martin/students.html" target="_blank">Software Evolution Lab</a></h4>
+									<p>Mad-ez, or Macro-based API Documentation Editor Z, is an Eclipse plugin that aims to make writing API documentation faster for Java programmers. The basic concept behind the project is the creation of pre-defined macro's, which when given parameters can be expanded to form full descriptive sentences for documentation. These expanded write-ups are then inserted into javadoc comments within the relevant file. Version 1.0.0 enables users to: </p>
+										<ul>
+											<li><p>Create new macro's using the key binding Command-1, which will activate a wizard with options of macros and initial parameters for the user to choose</p></li>
+
+											<li><p>Edit an existing macro by pressing any key whilst the cursor is within an expanded macro. This activates a wizard which allows for users to change current parameters.</p></li>
+										</ul>
+									<p>The project is currently in a private repository. If you are interested in the code and building process, feel free to contact me.</p> 
+						</div>
+
+						<div class="project">
+							<h2>Stop Harassment</h2>
+							<h4 class="subtitle">December 2016 - Present | <a href="http://uplifttogether.org/" target="_blank">Uplift</a></h4>
+							<p>Stop Harassment is a Chrome Extension that removes harassing words in tweets and swaps them out for funny or affirming phrases. I was a part of the team who created the backbone of the app during the Lesbians Who Tech Hackathon, you can read more about the initial project <a target="_blank" href="https://medium.com/uplifttogether/stop-harassment-the-chrome-extension-the-internet-needs-ba89b25f4c02#.z4okoqcq0">here</a>. I am currently working on the extension as a Winter volunteer. My first responsibility was to design the settings page of the extension, where the user can add or delete trigger words to filter.I then worked on a stemming solution, wherein the extension can detect different lexical forms of the trigger words to further filter. You can find the source code for the extension <a target="_blank" href="https://github.com/czchapma/onlineharassment">here</a>.
+							</p>
+						</div>
+
+						<div class="project">
+							<h2>OPAL</h2>
+							<h4 class="subtitle">September 2016 - December 2016 | <a href="http://sable.github.io/hig/" target="_blank">Health Informatics Group</a></h4>
+							<p>OPAL is a hybrid phone app, built on Cordova and Angular, that is designed to improve the experience of oncology patients. The app is currently in it's trial use at the Royal Victoria Hospital in Montreal. An important part of the app is the ability to collect information from the patients through Patient Reported Outcomes, or PRO's, that are pushed to patient's phones periodically. This information is used to guide the consultation process. Over the course of this project, I designed and implemented views for PRO historical trends. This enables physicians to visually track the patients progress. My implementaton also included highlighting for data trends that were deemed unsafe and required attention. The report for this project can be read <a href="./files/OPALTrendsViewPaper.pdf" target="_blank">here</a>. The project is currently in a private repository in order to protect patient privacy. If you'd like to know more about my code feel free to contact me.
+							</p>
+						</div>
+
+					</div>
+
+
+					<div class="col-sm-12" id="contactText">
+						<h3>Don't Worry, I Don't Bite</h3>
+						<p>If you'd like to inquire about any of my work, or are interested in working together, feel free to reach out. The easiest way to contact me is through <a href="mailto:bejallewis@hotmail.com?subject=Hi!">email</a></p>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<script>
+			// maybe try some jquery?
+			$(document).ready(function(){
+				$("#aboutMe").click(function(){
+					$('#contactText').fadeOut('fast');
+					$('#projectsText').fadeOut('fast');
+					$('#aboutText').fadeIn('slow');
+				});
+
+				$("#myProjects").click(function(){
+					$('#contactText').fadeOut('fast');
+					$('#aboutText').fadeOut('fast');
+					$('#projectsText').fadeIn('slow');
+				});
+
+				$("#sayHi").click(function(){
+					$('#aboutText').fadeOut('fast');
+					$('#projectsText').fadeOut('fast');
+					$('#contactText').fadeIn('slow');
+				});
+			})
+
+			 document.getElementById('aboutMe').onclick = changeColorAboutMe;
+			 document.getElementById('myProjects').onclick = changeColorProjects;
+			 document.getElementById('sayHi').onclick = changeColorSayHi;
+
+			 function changeColorAboutMe() {
+		        document.getElementById('aboutMe').style.color = "#DC784D";
+		        document.getElementById('myProjects').style.color = "#333333";
+		        document.getElementById('sayHi').style.color = "#333333";
+		        return;
+		     } 
+
+		     function changeColorProjects(){
+		     	document.getElementById('aboutMe').style.color = "#333333";
+		        document.getElementById('myProjects').style.color = "#DC784D";
+		        document.getElementById('sayHi').style.color = "#333333";
+		        return;
+		     }  
+
+		     function changeColorSayHi(){
+		     	document.getElementById('aboutMe').style.color = "#333333";
+		        document.getElementById('myProjects').style.color = "#333333";
+		        document.getElementById('sayHi').style.color = "#DC784D";
+		        return;
+		     }
+		</script>
+</div>
