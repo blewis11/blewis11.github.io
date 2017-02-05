@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+
 <html>
 	<head>
-		<!-- Latest compiled and minified CSS -->
 		<script
 		  src="https://code.jquery.com/jquery-3.1.1.js"
 		  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
@@ -15,10 +16,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
-
 			.main-jumbo {
 				background-color: #EDEDE7;
 				height: 100%;
@@ -78,43 +76,42 @@
 				text-decoration: underline;
 				cursor: pointer;
 			}
-			
+
 			#aboutMe {
 				color: #DC784D;
 			}
 
-		    #aboutText {
+			#aboutText {
 				position: relative;
 				transition: display 2s;
-		    }
+			}
 
-		    #projectsText {
-		    	display: none;
-		    	transition: display 2s;
-		    }
+			#projectsText {
+				display: none;
+				transition: display 2s;
+			}
 
-		    #contactText{
-		    	display: none;
-		    	transition: display 2s;
-		    }
+			#contactText{
+				display: none;
+				transition: display 2s;
+			}
 
-		    .subtitle {
-		    	color: #6b6b70;
-		    }
+			.subtitle {
+				color: #6b6b70;
+			}
 
-		    .subtitle a {
-		    	color: #6b6b70;
-		    }
+			.subtitle a {
+				color: #6b6b70;
+			}
 
-		    .project {
-		    	padding-bottom: 100px;
-		    }
+			.project {
+				padding-bottom: 100px;
+			}
 
-		    #contents{
-		    	padding-top: 5%;
-		    	padding-bottom: 10%;
-		    }
-
+			#contents{
+				padding-top: 5%;
+				padding-bottom: 10%;
+			}
 		</style>
 
 	</head>
@@ -199,44 +196,28 @@
 					$('#contactText').fadeOut('fast');
 					$('#projectsText').fadeOut('fast');
 					$('#aboutText').fadeIn('slow');
+					$('#aboutMe').css('color', '#DC784D');
+					$('#myProjects').css('color', '#333333');
+					$('#sayHi').css('color', '#333333');
 				});
 
 				$("#myProjects").click(function(){
 					$('#contactText').fadeOut('fast');
 					$('#aboutText').fadeOut('fast');
 					$('#projectsText').fadeIn('slow');
+					$('#myProjects').css('color', '#DC784D');
+					$('#aboutMe').css('color', '#333333');
+					$('#sayHi').css('color', '#333333');
 				});
 
 				$("#sayHi").click(function(){
 					$('#aboutText').fadeOut('fast');
 					$('#projectsText').fadeOut('fast');
 					$('#contactText').fadeIn('slow');
+					$('#sayHi').css('color', '#DC784D');
+					$('#myProjects').css('color', '#333333');
+					$('#aboutMe').css('color', '#333333');
 				});
-			})
-
-			 document.getElementById('aboutMe').onclick = changeColorAboutMe;
-			 document.getElementById('myProjects').onclick = changeColorProjects;
-			 document.getElementById('sayHi').onclick = changeColorSayHi;
-
-			 function changeColorAboutMe() {
-		        document.getElementById('aboutMe').style.color = "#DC784D";
-		        document.getElementById('myProjects').style.color = "#333333";
-		        document.getElementById('sayHi').style.color = "#333333";
-		        return;
-		     } 
-
-		     function changeColorProjects(){
-		     	document.getElementById('aboutMe').style.color = "#333333";
-		        document.getElementById('myProjects').style.color = "#DC784D";
-		        document.getElementById('sayHi').style.color = "#333333";
-		        return;
-		     }  
-
-		     function changeColorSayHi(){
-		     	document.getElementById('aboutMe').style.color = "#333333";
-		        document.getElementById('myProjects').style.color = "#333333";
-		        document.getElementById('sayHi').style.color = "#DC784D";
-		        return;
-		     }
+			});
 		</script>
 </div>
